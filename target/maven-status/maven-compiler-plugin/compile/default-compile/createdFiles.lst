@@ -1,0 +1,6 @@
+paquete\rhc\MainApp.class
+module-info.class
+paquete\rhc\controller\PersonaOverviewController.class
+paquete\rhc\controller\RootLayoutController.class
+paquete\rhc\model\Persona.class
+paquete\rhc\controller\PersonaCreateController.class
