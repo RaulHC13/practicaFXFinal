@@ -3,10 +3,14 @@ package paquete.rhc.controller;
 import java.io.IOException;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import paquete.rhc.MainApp;
 import paquete.rhc.model.Persona;
 
@@ -64,6 +68,22 @@ public class PersonaOverviewController {
 			disponibleCB.setSelected(false);
 		}
 	}
+	
+	@FXML
+	private void handleDelete() {
+		int index = personTable.getSelectionModel().getSelectedIndex();
+		if (index >= 0) {
+			personTable.getItems().remove(index);
+		} else {
+		Alert alert = new Alert(AlertType.WARNING);
+		alert.setTitle("Error");
+		alert.setContentText("No se ha seleccionado una persona válida.");
+		alert.setHeaderText("Error");
+		
+		alert.showAndWait();
+		}
+	}
+	
 	
 	@FXML
 	private void handleCreate() throws IOException {

@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import paquete.rhc.controller.PersonaCreateController;
 import paquete.rhc.controller.PersonaOverviewController;
 import paquete.rhc.controller.RootLayoutController;
 import paquete.rhc.model.Persona;
@@ -87,6 +88,10 @@ public class MainApp extends Application {
     	
     	Scene scene = new Scene(rootPane);
     	createStage.setScene(scene);
+    	
+    	PersonaCreateController controller = loader.getController();
+    	controller.setMainApp(this);
+    	controller.setDialogStage(createStage);
     	
     	createStage.showAndWait();
     	} catch(Exception e) {

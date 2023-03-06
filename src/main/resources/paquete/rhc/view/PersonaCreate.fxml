@@ -10,12 +10,12 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.rhc.controller.PersonaCreateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paquete.rhc.controller.PersonaCreateController">
    <children>
       <HBox layoutX="286.0" layoutY="252.0" spacing="40.0">
          <children>
-            <Button defaultButton="true" mnemonicParsing="false" text="OK" />
-            <Button mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="btnGuardar" defaultButton="true" mnemonicParsing="false" onAction="#crearPersona" text="OK" />
+            <Button mnemonicParsing="false" onAction="#salir" text="Cancel" />
          </children>
       </HBox>
       <GridPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="225.0" prefWidth="500.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -44,7 +44,7 @@
                   <Insets left="20.0" right="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField fx:id="tfDNI" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="tfDni" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="20.0" right="20.0" />
                </GridPane.margin>
